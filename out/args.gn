@@ -1,0 +1,20 @@
+# Build arguments go here.
+# See "gn args <out_dir> --list" for available build arguments.
+
+v8_static_library=true
+v8_monolithic=true
+v8_enable_i18n_support=false
+use_cxx11=true
+is_component_build=false
+is_clang=false
+v8_use_snapshot=false
+is_win_fastlink=true
+
+visual_studio_version="2017"
+strip_debug_info=true
+is_debug=false
+fatal_linker_warnings=false
+target_cpu="x64"
+
+v8_enable_backtrace = true
+v8_enable_slow_dchecks = true
