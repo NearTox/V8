@@ -4,7 +4,7 @@
   <PropertyGroup Label="UserMacros">
     <MyOutDir>$(SolutionDir)bin\$(Configuration)-$(PlatformTarget)-vs$(VisualStudioVersion)\</MyOutDir>
     <MyTempDir>$(SolutionDir)obj\$(ProjectName)\$(Configuration)-$(PlatformTarget)-vs$(VisualStudioVersion)\</MyTempDir>
-    <V8Include>$(SolutionDir)\v8\include;</V8Include>
+    <V8Include>$(SolutionDir)\v8;$(SolutionDir)\v8\include;$(SolutionDir)\out\$(PlatformTarget)\gen\include;</V8Include>
     <V8Define>USE_AURA=1;CHROMIUM_BUILD;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32_LEAN_AND_MEAN;NOMINMAX;NTDDI_VERSION=0x06010000;_WIN32_WINNT=0x0601;WINVER=0x0601;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;V8_TYPED_ARRAY_MAX_SIZE_IN_HEAP=64;ENABLE_MINOR_MC;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;V8_CONCURRENT_MARKING;V8_EMBEDDED_BUILTINS;DISABLE_UNTRUSTED_CODE_MITIGATIONS</V8Define>
   </PropertyGroup>
   <PropertyGroup />

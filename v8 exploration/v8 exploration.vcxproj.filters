@@ -2,9 +2,24 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="Core\V8.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Console.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Utils.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="v8 exploration.cpp" />
+    <ClCompile Include="Core\V8.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Console.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico" />
@@ -12,5 +27,10 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="v8 exploration.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{861e5aec-b046-4e77-9a8b-3b1d40908d9d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

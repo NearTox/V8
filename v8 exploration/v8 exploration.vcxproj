@@ -177,9 +177,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Core\Console.hpp" />
+    <ClInclude Include="Core\Utils.hpp" />
+    <ClInclude Include="Core\V8.hpp" />
     <ClInclude Include="Resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Core\Console.cpp" />
+    <ClCompile Include="Core\v8.cpp" />
     <ClCompile Include="v8 exploration.cpp" />
   </ItemGroup>
   <ItemGroup>
