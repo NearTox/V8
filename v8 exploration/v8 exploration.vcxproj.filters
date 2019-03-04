@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="Resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="v8 exploration.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico" />
+    <Image Include="v8 exploration.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="v8 exploration.rc" />
+  </ItemGroup>
+</Project>

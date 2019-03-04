@@ -1,3 +1,4 @@
-/v8/
-/out/*
-!args.gn
+/v8
+.vs/
+bin/
+obj/

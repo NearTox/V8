@@ -4,10 +4,9 @@
 ## Prerequisites
 See [v8 documentation](https://v8.dev/docs/build)
 
-## Build
+## Pre-Build
 
 ```bash
-gn gen out --root=v8
-cd out
-ninja -C . v8_monolith
+gn gen out/x64 --root=v8
+ninja -C out/x64 v8_monolith
 ```

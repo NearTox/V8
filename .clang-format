@@ -1,0 +1,16 @@
+BasedOnStyle: Google
+ColumnLimit: 100
+DerivePointerAlignment: false
+PointerAlignment: Left
+SpaceAfterTemplateKeyword: false
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+BreakBeforeInheritanceComma: true
+AllowShortBlocksOnASingleLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AlignAfterOpenBracket: AlwaysBreak
+BreakConstructorInitializers: AfterColon
+AlwaysBreakBeforeMultilineStrings: false
+IndentPPDirectives: AfterHash
+AllowShortCaseLabelsOnASingleLine: true
+
+Standard: Cpp11
