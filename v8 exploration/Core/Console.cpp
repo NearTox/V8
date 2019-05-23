@@ -23,7 +23,7 @@ V8Console::V8Console(v8::Local<v8::Context>& context, v8::Isolate* isolate) {
     result->SetInternalField(0, ptr);
     pThis = handle_scope.Escape(result);
   }
-  if (!pThis.IsEmpty()) { context->Global()->Set("console"_v8(isolate), pThis); }
+  if (!pThis.IsEmpty()) { context->Global()->Set(context, "console"_v8(isolate), pThis); }
 }
 
 inline void V8Console::log(const v8::FunctionCallbackInfo<v8::Value>& args) {

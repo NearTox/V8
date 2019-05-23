@@ -25,6 +25,8 @@ class V8Core {
   V8Core& operator=(V8Core&) = delete;
   V8Core& operator=(V8Core&&) = delete;
 
+  v8::Platform* gPlatform() { return mPlatform.get(); }
+
  private:
   std::unique_ptr<v8::Platform> mPlatform;
   v8::Isolate::CreateParams mCreateParams;
