@@ -19,7 +19,7 @@ struct V8StringHelper {
   std::string_view data;
 
   constexpr V8StringHelper(const char* str, size_t len) noexcept : data(str, len) {}
-  constexpr V8StringHelper(const char* str) noexcept : data(str, std::strlen(str)) {}
+  V8StringHelper(const char* str) noexcept : data(str, std::strlen(str)) {}
 
   [[nodiscard]] inline v8::Local<v8::String> operator()(v8::Isolate* isolate) {
     return NewV8String(isolate, data).ToLocalChecked();
@@ -28,7 +28,7 @@ struct V8StringHelper {
 
 struct V8ScriptRun_t {
   // indicates a autorun script
-  explicit V8ScriptRun_t() = default;
+  constexpr explicit V8ScriptRun_t() noexcept = default;
 };
 
 static constexpr V8ScriptRun_t kV8ScriptRun{};
@@ -37,7 +37,7 @@ struct V8ScriptHelper {
   std::string_view code;
 
   constexpr V8ScriptHelper(const char* str, size_t len) noexcept : code(str, len) {}
-  constexpr V8ScriptHelper(const char* str) noexcept : code(str, std::strlen(str)) {}
+  V8ScriptHelper(const char* str) noexcept : code(str, std::strlen(str)) {}
 
   [[nodiscard]] inline v8::MaybeLocal<v8::Script> operator()(
       v8::Local<v8::Context> context, v8::ScriptOrigin* origin = nullptr) {

@@ -55,9 +55,7 @@ class V8Isolate {
 class V8Context {
  public:
   V8Context(v8::Isolate* isolate) :
-      isolate_scope(isolate),
-      handle_scope(isolate),
-      context(CreateShellContext(isolate)) {}
+      isolate_scope(isolate), handle_scope(isolate), context(CreateShellContext(isolate)) {}
 
   [[nodiscard]] inline v8::Local<v8::Context>& Get() noexcept { return context; }
   [[nodiscard]] inline v8::Local<v8::Context>& operator->() noexcept { return context; }

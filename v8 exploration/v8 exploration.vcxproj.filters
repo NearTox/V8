@@ -14,10 +14,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="v8 exploration.cpp" />
-    <ClCompile Include="Core\V8.cpp">
+    <ClCompile Include="Core\Console.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Console.cpp">
+    <ClCompile Include="Core\V8.cpp">
       <Filter>Core</Filter>
     </ClCompile>
   </ItemGroup>

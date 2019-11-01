@@ -1,14 +1,13 @@
-#include "resource.h"
+#include "Resource.h"
+
+#include "Core/Console.hpp"
+#include "Core/V8.hpp"
+
+#include <include/libplatform/libplatform.h>
+#include <include/v8-inspector.h>
 
 #include <SDKDDKVer.h>
 #include <windows.h>
-
-#include "Core/v8.hpp"
-
-#include "Core/Console.hpp"
-
-#include "include/libplatform/libplatform.h"
-#include "include/v8-inspector.h"
 
 #include <cassert>
 
