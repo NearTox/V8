@@ -4,10 +4,11 @@
   <PropertyGroup Label="UserMacros">
     <MyOutDir>$(SolutionDir)bin\$(Configuration)-$(PlatformTarget)-vs$(VisualStudioVersion)\</MyOutDir>
     <MyTempDir>$(SolutionDir)obj\$(ProjectName)\$(Configuration)-$(PlatformTarget)-vs$(VisualStudioVersion)\</MyTempDir>
-    <V8Include>$(SolutionDir)\..\v8\v8;$(SolutionDir)\..\v8\v8\include;$(SolutionDir)\..\v8\out\$(PlatformTarget)\gen\include;$(SolutionDir)\..\v8\out\$(PlatformTarget)\gen;$(SolutionDir)\..\v8\v8\third_party\icu\source\common;$(SolutionDir)\..\v8\v8\third_party\icu\source\i18n</V8Include>
-    <V8Lib>v8_libbase.lib;v8_libplatform.lib;v8_base_without_compiler_0.lib;icui18n.lib;icuuc.lib;torque_generated_definitions.lib;v8_libsampler.lib;inspector.lib;inspector_string_conversions.lib;crdtp.lib;crdtp_platform.lib;v8_base_without_compiler_1.lib;v8_compiler.lib;v8_snapshot.lib;adler32_simd.obj;inffast_chunk.obj;inflate.obj;crc32_simd.obj;crc_folding.obj;fill_window_sse.obj</V8Lib>
-    <V8Define>USE_AURA=1;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32_LEAN_AND_MEAN;NOMINMAX;NTDDI_VERSION=0x06020000;_WIN32_WINNT=0x0602;WINVER=0x0602;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;V8_EMBEDDER_STRING="-NearTox.0";V8_TYPED_ARRAY_MAX_SIZE_IN_HEAP=64;ENABLE_MINOR_MC;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;V8_CONCURRENT_MARKING;DISABLE_UNTRUSTED_CODE_MITIGATIONS;V8_INTL_SUPPORT;V8_USE_SIPHASH;V8_31BIT_SMIS_ON_64BIT_ARCH;V8_WIN64_UNWINDING_INFO;V8_ENABLE_LAZY_SOURCE_POSITIONS;V8_ENABLE_REGEXP_INTERPRETER_THREADED_DISPATCH;V8_HAVE_TARGET_OS;V8_TARGET_OS_WIN;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_STATIC_IMPLEMENTATION;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;UCHAR_TYPE=wchar_t;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;V8_SNAPSHOT_COMPRESSION;</V8Define>
-    <V8LibDir>$(SolutionDir)..\v8\out\$(PlatformTarget)\obj\;$(SolutionDir)..\v8\out\$(PlatformTarget)\obj\third_party\icu\;$(SolutionDir)..\v8\out\$(PlatformTarget)\obj\src\inspector\;$(SolutionDir)..\v8\out\$(PlatformTarget)\obj\third_party\inspector_protocol\;</V8LibDir>
+    <V8Include>$(SolutionDir)\..\v8\v8;$(SolutionDir)\..\v8\v8\include;$(SolutionDir)\..\v8\out\$(PlatformTarget)\gen\include;$(SolutionDir)\..\v8\out\$(PlatformTarget)\gen</V8Include>
+    <V8Lib>v8_libbase.lib;v8_libplatform.lib;v8_base_without_compiler_0.lib;icui18n.lib;icuuc.lib;torque_generated_definitions.lib;v8_libsampler.lib;inspector.lib;inspector_string_conversions.lib;crdtp.lib;crdtp_platform.lib;v8_base_without_compiler_1.lib;v8_compiler.lib;v8_snapshot.lib;v8_cppgc_shared.lib;cppgc_base.lib;v8_cppgc_shared.lib;compression_utils_portable.lib;</V8Lib>
+    <V8Define>USE_AURA=1;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;PSAPI_VERSION=2;WIN32_LEAN_AND_MEAN;NOMINMAX;NTDDI_VERSION=0x06020000;_WIN32_WINNT=0x0602;WINVER=0x0602;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;V8_EMBEDDER_STRING="-NearTox.0";V8_TYPED_ARRAY_MAX_SIZE_IN_HEAP=64;ENABLE_MINOR_MC;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;V8_CONCURRENT_MARKING;DISABLE_UNTRUSTED_CODE_MITIGATIONS;V8_INTL_SUPPORT;V8_USE_SIPHASH;V8_31BIT_SMIS_ON_64BIT_ARCH;V8_WIN64_UNWINDING_INFO;V8_ENABLE_LAZY_SOURCE_POSITIONS;V8_ENABLE_REGEXP_INTERPRETER_THREADED_DISPATCH;V8_HAVE_TARGET_OS;V8_TARGET_OS_WIN;U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_STATIC_IMPLEMENTATION;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;UCHAR_TYPE=wchar_t;U_ENABLE_TRACING=1;U_ENABLE_RESOURCE_TRACING=0;V8_SNAPSHOT_COMPRESSION;V8_SHARED_RO_HEAP;V8_REVERSE_JSARGS;</V8Define>
+    <V8DefineX64>CPPGC_CAGED_HEAP;V8_COMPRESS_POINTERS;CPPGC_CAGED_HEAP</V8DefineX64>
+    <V8LibDir>$(SolutionDir)..\v8\out\$(PlatformTarget)\obj\;$(SolutionDir)..\v8\out\$(PlatformTarget)\obj\src\inspector\;$(SolutionDir)..\v8\out\$(PlatformTarget)\obj\third_party\inspector_protocol\;</V8LibDir>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup />
@@ -26,6 +27,9 @@
     </BuildMacro>
     <BuildMacro Include="V8Define">
       <Value>$(V8Define)</Value>
+    </BuildMacro>
+    <BuildMacro Include="V8DefineX64">
+      <Value>$(V8DefineX64)</Value>
     </BuildMacro>
     <BuildMacro Include="V8LibDir">
       <Value>$(V8LibDir)</Value>
