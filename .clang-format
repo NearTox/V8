@@ -15,4 +15,4 @@ AlwaysBreakBeforeMultilineStrings: false
 IndentPPDirectives: AfterHash
 AllowShortCaseLabelsOnASingleLine: true
 
-Standard: Cpp11
+Standard: Cpp20

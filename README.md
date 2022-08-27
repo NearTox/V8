@@ -1,5 +1,5 @@
-## Current V8 branch / tag:
- + 8.9-lkgr / 8.9.255.18
+## Current V8 branch:
+ + 10.4-lkgr
 
 ## Prerequisites
 See [v8 documentation](https://v8.dev/docs/build)
